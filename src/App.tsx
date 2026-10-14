@@ -39,13 +39,6 @@ export default function App() {
   const rgb = hslToRgb(hsl.h, hsl.s, hsl.l);
   const hex = rgbToHex(rgb.r, rgb.g, rgb.b);
 
-  // Dark Mode State (default to light mode, user can toggle)
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
-    const saved = localStorage.getItem('remova_theme') || localStorage.getItem('chromawheel_theme');
-    if (saved) return saved === 'dark';
-    return false;
-  });
-
   // Saved Palettes State (persisted in localStorage with backwards compatibility)
   const [savedPalettes, setSavedPalettes] = useState<SavedPalette[]>(() => {
     const stored =
@@ -66,16 +59,12 @@ export default function App() {
     visible: false,
   });
 
-  // Apply dark mode class to html element
+  // Ensure light mode is strictly active at all times
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('remova_theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('remova_theme', 'light');
-    }
-  }, [darkMode]);
+    document.documentElement.classList.remove('dark');
+    localStorage.removeItem('remova_theme');
+    localStorage.removeItem('chromawheel_theme');
+  }, []);
 
   // Listen to browser hash changes (for back/forward navigation and links)
   useEffect(() => {
@@ -167,13 +156,11 @@ export default function App() {
   }, [showToast]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
+    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 transition-colors duration-200">
       {/* 1. SIMPLE HEADER */}
       <Navbar
         currentPage={currentPage}
         onNavigate={handleNavigate}
-        darkMode={darkMode}
-        onToggleDarkMode={() => setDarkMode(!darkMode)}
       />
 
       {/* RENDER ACTIVE PAGE */}
