@@ -1,0 +1,6 @@
+{
+  "name": "ChromaWheel — Free Online Color Wheel Picker & Palette Generator",
+  "description": "ChromaWheel is a fast, free, interactive color wheel picker, color harmony generator, CSS gradient designer, WCAG contrast checker, and color converter.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
