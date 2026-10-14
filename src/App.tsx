@@ -14,6 +14,11 @@ import { FavoritesList } from './components/FavoritesList';
 import { MoreColorTools } from './components/MoreColorTools';
 import { EducationalGuide } from './components/EducationalGuide';
 import { AdPlaceholder } from './components/AdPlaceholder';
+import {
+  AdsterraResponsiveBanner,
+  AdsterraBanner300x250,
+  AdsterraNativeBanner,
+} from './components/AdsterraAd';
 import { Footer, PageView } from './components/Footer';
 import { Toast } from './components/Toast';
 import { AboutPage } from './pages/AboutPage';
@@ -223,8 +228,8 @@ export default function App() {
             />
           </section>
 
-          {/* 10. ADVERTISEMENT 1: Below main color tool and its palette */}
-          <AdPlaceholder slotId="palette-ad" />
+          {/* ADVERTISEMENT 1: Responsive Banner (728x90 on Desktop/Tablet, 320x50 on Mobile) */}
+          <AdsterraResponsiveBanner />
 
           {/* 6. COLLAPSIBLE GRADIENT TOOL */}
           <section aria-label="Gradient Generator">
@@ -255,8 +260,11 @@ export default function App() {
             />
           </section>
 
-          {/* 10. ADVERTISEMENT 2: Near bottom of page, before FAQ */}
-          <AdPlaceholder slotId="bottom-ad" />
+          {/* ADVERTISEMENT 2: 300x250 Rectangle Banner */}
+          <AdsterraBanner300x250 />
+
+          {/* ADVERTISEMENT 3: Native Recommendation Banner */}
+          <AdsterraNativeBanner />
 
           {/* 9. HOW TO USE & FAQ */}
           <section aria-label="How to use">

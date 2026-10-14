@@ -89,16 +89,13 @@ export const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onNavigate
 
         {/* Section 5 */}
         <section className="space-y-3 pt-2">
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white">5. Future Advertising & Cookies (Google AdSense)</h2>
-          <div className="p-4 rounded-2xl bg-indigo-50/60 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900 text-xs sm:text-sm text-indigo-900 dark:text-indigo-200">
-            <strong>Important Status Note:</strong> Advertisements are <em>not</em> currently active on Remova. The website currently displays non-functional placeholder slots to prepare the design layout for future monetization.
-          </div>
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white">5. Advertising & Cookies</h2>
           <p>
-            In the future, Remova plans to display advertisements through <strong>Google AdSense</strong> to keep all color tools completely free without charging subscriptions or fees. Once advertising is enabled:
+            Remova displays advertisements through third-party advertising partners (including <strong>Adsterra</strong> and future advertising networks such as Google AdSense) to keep all color tools completely free for visitors without charging subscriptions or fees:
           </p>
           <ul className="list-disc list-inside space-y-1.5 text-slate-600 dark:text-slate-400 text-sm">
-            <li>Google and its advertising partners may use cookies (including the DoubleClick cookie) or web beacons to serve ads based on your prior visits to this website and other sites across the internet.</li>
-            <li>Google's use of advertising cookies enables it and its partners to serve personalized or contextual advertisements to you.</li>
+            <li>Advertising partners may use cookies, device identifiers, or web beacons to serve advertisements based on your visits to this website and other sites across the internet.</li>
+            <li>These technologies help measure ad delivery, optimize performance, and prevent fraud.</li>
             <li>
               You can choose to opt out of personalized advertising by visiting the{' '}
               <a
